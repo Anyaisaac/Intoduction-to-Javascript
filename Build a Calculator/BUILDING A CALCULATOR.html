@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<title>Calculator</title>
+</head>
+
+<body>
+<div class="main">
+<form name="calculatorForm">
+<div class="screen">
+<input type="text" name="screen" readonly/>
+</div>
+
+<div class="btn">
+<input type="button" name="clear" value="clear" />
+<input type="button" name="del" value="delete" />
+</div>
+
+<div class="btn">
+<input type="button" name="num1" value="1" oneclick="valueButton(this);" />
+<input type="button" name="num2" value="2" oneclick="valueButton(this);" />
+<input type="button" name="num3" value="3" oneclick="valueButton(this);" />
+<input type="button" name="plus" value="+" oneclick="valueButton(this);" />
+</div>
+
+<div class="btn">
+<input type="button" name="num4" value="4" oneclick="valueButton(this);" />
+<input type="button" name="num5" value="5" oneclick="valueButton(this);" />
+<input type="button" name="num6" value="6" oneclick="valueButton(this);" />
+<input type="button" name="sub" value="-" oneclick="valueButton(this);" />
+</div>
+
+<div class="btn">
+<input type="button" name="num7" value="7" oneclick="valueButton(this);" />
+<input type="button" name="num8" value="8" oneclick="valueButton(this);" />
+<input type="button" name="num9" value="9" oneclick="valueButton(this);" />
+<input type="button" name="mul" value="*" oneclick="valueButton(this);" />
+</div>
+
+<div class="btn">
+<input type="button" name="num0" value="0" oneclick="valueButton(this);" />
+<input type="button" name="div" value="/" oneclick="valueButton(this);" />
+<input type="button" name="equal" value="=" oneclick="calculate()" />
+</div>
+</form>
+</div>
+  <script src="script.js"></script>
+
+ <!-- script -->
+<script type="text/javascript">
+	function valueButton(e){
+		calculatorForm.screen.value+= e.value;
+}
+function clear(){
+	calculatorForm.screen.value = null;
+}
+function calculate(){
+	calculateForm.screen.value = eval(calculatorForm.screen.value);
+}
+</script> 
+</body>
+
+</html>
